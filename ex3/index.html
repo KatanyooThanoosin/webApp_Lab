@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avengers</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    .section-padding{
+      padding: 100px 0;
+    }
+    body{
+      background-color: rgba(196, 196, 194, 0.114);
+    }
+    .carousel-item{
+      height: 100vh;
+      min-height: 300px;
+    }
+    .carousel-caption{
+      bottom: 220px;
+      z-index: 2;
+    }
+    .carousel-caption h5{
+      font-size: 45px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 25px;
+    }
+    .carousel-caption p{
+      width: 60%;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+    .carousel-inner::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .w-100{
+      height: 100vh;
+    }
+    .captain{
+      background-color: rgb(48, 156, 202);
+    }
+    .ironman{
+      background-color: rgb(221, 88, 73);
+    }
+    .thor{
+      background-color: orange;
+    }
+    .hulk{
+      background-color: rgb(8, 205, 93);
+    }
+    .moo .card-body i{
+      font-size: 20px;
+    }
+    .moo .card-body {
+      box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    .card-body{
+      display: flex;
+      flex-direction: column;
+    }
+    .card-body img{
+      align-self: center;
+    }
+    @media only screen and (min-width: 768px) and (max-width:991px) {
+      .img-area img{
+        width: 100%;
+      }
+      .carousel-caption p{
+        width: 100%;
+      }
+      .card{
+        margin-bottom: 30px;
+      }
+    }
+    @media only screen and (max-width:767px) {
+      .navbar-nav{
+          text-align: center;
+      }
+      .carousel-caption{
+          bottom: 125px;
+      }
+      .carousel-caption h5{
+          font-size: 17px;
+      }
+      .carousel-caption a{
+          padding: 10px 15px;
+          font-size: 17px;
+      }
+      .carousel-caption p{
+          width: 100%;
+          line-height: 1.6;
+          font-size: 12px;
+      }
+      .card{
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+      <a href="#" class="navbar-brand">Avengers</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navToggle">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#captain" class="nav-link">Captain</a>
+          </li>
+          <li class="nav-item">
+            <a href="#ironman" class="nav-link">IronMan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#thor" class="nav-link">Thor</a>
+          </li>
+          <li class="nav-item">
+            <a href="#hulk" class="nav-link">Hulk</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bw" class="nav-link">BlackWidow</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--End Nav Bar-->
+  <main>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://wallpaperaccess.com/full/24844.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h5>Avengers</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/87907.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <h5>Captain america</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sequi vero necessitatibus minima dolore repellendus!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/1107052.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <h5>Iron Man</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, praesentium.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/408920.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <h5>Thor</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus itaque rerum excepturi.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/2190356.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <h5>Hulk</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus itaque rerum excepturi.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/2609345.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <h5>Black Widow</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus itaque rerum excepturi.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section id="about" class="about section-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="seection-header text-center pb-5">
+                      <h3>The Avenger</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero vel unde repellat sint ab obcaecati pariatur sapiente quidem? Cumque ipsa dicta non nostrum.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <img src="https://wallpaperaccess.com/full/311268.jpg" alt="" class="av_1 img-fluid">
+                          <h5 class="card-title py-2">The Avengers(2012)</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odio iure maiores perspiciatis cum. Nihil veniam, nostrum iusto assumenda consequatur dolor</p>
+                          <a href="https://www.imdb.com/title/tt0848228/" class="btn btn-warning">Review</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <img src="https://wallpaperaccess.com/full/1117183.jpg" alt="" class="img-fluid">
+                          <h5 class="card-title py-2">Age of Ultron(2015)</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odio iure maiores perspiciatis cum. Nihil veniam, nostrum iusto assumenda consequatur dolor</p>
+
+                          <a href="https://www.imdb.com/title/tt2395427/" class="btn btn-warning">Review</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <img src="https://wallpaperaccess.com/full/4688.jpg" alt="" class="img-fluid">
+                          <h5 class="card-title py-2">Infinity War(2018)</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odio iure maiores perspiciatis cum. Nihil veniam, nostrum iusto assumenda consequatur dolor</p>
+                          <a href="https://www.imdb.com/title/tt4154756/" class="btn btn-warning">Review</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <img src="https://wallpaperaccess.com/full/1089104.png" alt="" class="img-fluid">
+                          <h5 class="card-title py-2">End Game(2019)</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odio iure maiores perspiciatis cum. Nihil veniam, nostrum iusto assumenda consequatur dolor</p>
+                          <a href="https://www.imdb.com/title/tt4154796/" class="btn btn-warning">Review</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="captain" class="captain section-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-12 col-12">
+                  <div class="captain-img">
+                      <img src="https://wallpaperaccess.com/full/55595.jpg" alt="" class="img-fluid rounded-2">
+                  </div>
+              </div>
+              <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                  <div class="captain-text">
+                      <h2>Captain America</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora recusandae? Animi sapiente beatae exercitationem architecto! Consequatur magnam architecto, quia at itaque amet ullam, ducimus quo recusandae soluta voluptates ratione!</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="ironman" class="ironman section-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                  <div class="ironman-text">
+                      <h2>Iron Man</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora recusandae? Animi sapiente beatae exercitationem architecto! Consequatur magnam architecto, quia at itaque amet ullam, ducimus quo recusandae soluta voluptates ratione!</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-12">
+                  <div class="ironman-img">
+                      <img src="https://wallpaperaccess.com/full/889062.jpg" alt="" class="img-fluid rounded-3">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="thor" class="thor section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="thor-img">
+                    <img src="https://wallpaperaccess.com/full/408943.jpg" alt="" class="img-fluid rounded-3">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                <div class="thor-text">
+                    <h2>Thor</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora recusandae? Animi sapiente beatae exercitationem architecto! Consequatur magnam architecto, quia at itaque amet ullam, ducimus quo recusandae soluta voluptates ratione!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <section id="hulk" class="hulk section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                <div class="hulk-text">
+                    <h2>Hulk</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora recusandae? Animi sapiente beatae exercitationem architecto! Consequatur magnam architecto, quia at itaque amet ullam, ducimus quo recusandae soluta voluptates ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="hulk-img">
+                    <img src="https://wallpaperaccess.com/full/46340.jpg" alt="" class="img-fluid rounded-3">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="bw" class="bw section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="bw-img">
+                    <img src="https://wallpaperaccess.com/full/2388593.jpg" alt="" class="img-fluid rounded-2">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                <div class="bw-text">
+                    <h2>Black Widow</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora recusandae? Animi sapiente beatae exercitationem architecto! Consequatur magnam architecto, quia at itaque amet ullam, ducimus quo recusandae soluta voluptates ratione!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <footer class="p-1 bg-dark text-center">
+    <div class="container">
+        <p class="text-white">Copy Right @Katanyoo 64010001</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
