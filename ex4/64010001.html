@@ -38,11 +38,14 @@
             divButton.appendChild(showDate);
 
             let colorList = ["red", "green", "blue","pink","yellow","grey"];
-            let colorIndex = 0;
+            let backgroundIndex = 0;
+            let textIndex = 2;
             showDate.style.backgroundColor = colorList[0];
             let changeColor = () =>{
-                colorIndex = (colorIndex + 1)%colorList.length;
-                showDate.style.backgroundColor = colorList[colorIndex];
+                backgroundIndex = (backgroundIndex + 1)%colorList.length;
+                textIndex = (textIndex+1)%colorList.length;
+                showDate.style.backgroundColor = colorList[backgroundIndex];
+                showDate.style.color = colorList[textIndex];
             };
 
             let webWorker = null;
@@ -94,11 +97,53 @@
 
             let divMyInfo = document.createElement("div");
             let unOrder = document.createElement("ul");
-            let name = documet.createElement("li");
-            name.innerHTML = "name";
+            let name = document.createElement("li");
+            name.innerHTML = "Katanyoo Thanoosin,ID: 64010001";
             unOrder.appendChild(name);
+            let subject = document.createElement("li");
+            subject.innerHTML = "Subject:WEB APPLICATION DEVELOPMENT";
+            unOrder.appendChild(subject);
+            let semester = document.createElement("li");
+            semester.innerHTML = "Semester:2";
+            unOrder.appendChild(semester);
+            divMyInfo.hidden = true;
             divMyInfo.appendChild(unOrder);
             mainContainer.appendChild(divMyInfo);
+
+            psnIf.onclick = () => {
+                divMyInfo.hidden = !divMyInfo.hidden;
+            };
+            
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "Snapshots";
+            mainContainer.appendChild(h1);
+            
+            let snapList = [
+            ["Fireworks","https://sgp1.vultrobjects.com/img-in-th/UBzreZ.jpeg"],
+            ["Crest","https://sgp1.vultrobjects.com/img-in-th/UBzIZD.jpeg"],
+            ["Action","https://sgp1.vultrobjects.com/img-in-th/UBzD38.jpeg"],
+            ["Buffalo","https://sgp1.vultrobjects.com/img-in-th/UBzwiL.jpeg"]
+            ];
+
+            let snUL = document.createElement("ul");
+            mainContainer.appendChild(snUL);
+
+            let img = document.createElement("img");
+            img.setAttribute("src", "https://sgp1.vultrobjects.com/img-in-th/UBzHia.jpeg");
+            mainContainer.appendChild(img);
+
+            for(let i = 0; i < snapList.length; i+=1){
+                let snapItem = document.createElement("li");
+                snUL.appendChild(snapItem);
+
+                let link = document.createElement("a");
+                link.innerHTML = snapList[i][0];
+                link.href = "#";
+                link.onclick = () =>{
+                    img.src=snapList[i][1];
+                };
+                snapItem.appendChild(link);
+            }
 
         </script>
     </body>
